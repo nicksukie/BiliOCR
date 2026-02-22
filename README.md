@@ -6,6 +6,9 @@ BiliOCR is a screen reader tool for Mac that can translate subtitles in real tim
 
 It also has a text-to-speech option to read out the translated subtitles for a dubbing effect. 
 
+<img width="1145" height="714" alt="Pasted image 20260222172655" src="https://github.com/user-attachments/assets/398365e5-8af8-443c-9bc4-e6e1eb4e1146" />
+<img width="956" height="534" alt="Pasted image 20260222151501" src="https://github.com/user-attachments/assets/626dcd21-f4b3-455f-8dfb-a761ee315ccb" />
+
 ## Why is it? 
 
 The inspiration for creating this tool is to provide a simple way to watch and understand videos on Bilibili for people whose native language is not Chinese.
@@ -30,7 +33,8 @@ Other options include audio-based translators, like (realtime-subtitle)[https://
 - Only available for Chinese source language
 - Check off the Learn Mode box at the bottom of the main menu to activate learn mode. 
 - When translations begin to populate the subtitle box, keywords will pop up in a separate panel, including the Chinese word, the pinyin pronunciation, and the target language definition. If target language is English, it will first search CEdict for definitions. For other target languages, it will obtain definitions through translation based on the selected model (highly recommend using MT for this, as LLM is overkill). 
-- Learn Mode keywords can be starred, which saves them to a local database so you can review them later. Words can also be copied (one or more by highlighting them), or saved into markdown files (full list).
+- Learn Mode keywords can be starred, which saves them to a local database so you can review them later. Words can also be copied (one or more by highlighting them), or saved into markdown files (full list).<img width="466" height="525" alt="Pasted image 20260222173311" src="https://github.com/user-attachments/assets/daf0368a-765a-4255-a62f-c1c4191a8bab" />
+
 
 ### Text-to-speech (TTS) - Real-time overdub.
 - OCR translation mode comes complete with TTS integration, to achieve an automatic overdub effect.
