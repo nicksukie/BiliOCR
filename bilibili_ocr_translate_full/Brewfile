@@ -1,0 +1,19 @@
+# Homebrew packages required for Bilibili OCR & Audio Translator
+# Install with: brew bundle install
+
+# Core audio/video processing (required for PyAV)
+tap "homebrew/bundle"
+
+# Audio capture - BlackHole for system audio on macOS
+# This allows capturing audio from browser/video players
+# Install with: brew install blackhole-2ch
+# After install, set up Multi-Output Device in Audio MIDI Setup
+# to route system audio to BlackHole input
+brew "blackhole-2ch"
+
+# FFmpeg - required for audio/video processing (PyAV dependency)
+# Used by audio transcription pipeline
+brew "ffmpeg"
+
+# pkg-config - helps pip find system libraries
+brew "pkg-config"
