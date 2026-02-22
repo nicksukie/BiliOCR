@@ -61,5 +61,8 @@ We appreciate community support in helping us to know which language combination
 - Chinese-->English, All Siliconflow models, OpenAI (GPT 4 models), default settings. 
 
 #### Known bugs
-- GPT-5 models seems to be having API response issues. Stick with GPT-4o-mini for now. 
-- \[Resolved\] TTS audio might begin to stutter after some time due to competing CPU usage with OCR. Try sending `sudo killall coreaudiod` into your terminal to see if it helps, or refreshing the Format in "Audio Devices">"Macbook Speakers". Otherwise, consider using a Bluetooth audio device. 
+- GPT-5 models seems to be having API response issues. Stick with GPT-4o-mini for now.
+- - \[Resolved\] TTS audio might begin to stutter after some time due to competing CPU usage with OCR. Try sending `sudo killall coreaudiod` into your terminal to see if it helps, or refreshing the Format in "Audio Devices">"Macbook Speakers". Otherwise, consider using a Bluetooth audio device.
+ 
+### Disclaimer
+This app is in no way affiliated with Bilibili 哔哩哔哩.
