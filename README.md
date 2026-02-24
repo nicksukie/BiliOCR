@@ -16,17 +16,6 @@ Most videos on Bilibili have subtitles, but they are embedded into the video its
 
 Other options include audio-based translators, like [realtime-subtitle](https://github.com/Vanyoo/realtime-subtitle/tree/master). 
 
-## How to use: 
-- First, obtain and input an API key for *at least* **one** small model (MT) and **one** large model (LLM) provider. Small model translation quality is inferior but good to have as a fallback in case of API outage or latency. Small model translation is also used to catch words that LLM fails to translate, preventing mixed language output. 
-- Navigate to Bilibili (or your video player of choice). 
-- Select your preferred api provider and model (LLM recommended, and MT used as a fallback).
-- For simple usage, default OCR and TTS (speech/voice) settings can be used; no need to change anything. 
-- Click OK 
-- Drag the red box over the video subtitle area
-- Press enter: the box will turn white. This means OCR detection is activated. 
-- Press play on your video.
-- Subtitles will appear.
-
 ## Additional Features
 
 ### Learn Mode - Video watching as a language improvement method. 
@@ -48,6 +37,7 @@ Other options include audio-based translators, like [realtime-subtitle](https://
 - This is an adaptation of [realtime-subtitle ](https://github.com/Vanyoo/realtime-subtitle/tree/master) integrated with our subtitle streaming/reconciling algorithm, real-time updating UI, and LLM/MT integrated translation options. Audio mode is not compatible with TTS, because the dubbed audio will confound the audio input for translation, creating an undesirable feedback loop. 
 - Setup requires Blackhole to route computer audio back as input to be detected by the system. See  [realtime-subtitle ](https://github.com/Vanyoo/realtime-subtitle/tree/master) for detailed setup instructions and documentation. 
 
+
 ## Installation
 #### Method 1 (Easiest)
 1. Click on "Releases" on the right side of this page.
@@ -66,6 +56,24 @@ Other options include audio-based translators, like [realtime-subtitle](https://
 1. Download the full repo from Github.
 2. Install all dependencies (both those in requirements.txt, as well as in Brewfile.)
 3. Run the app using your terminal.
+
+
+
+## How to Use
+- First, obtain and input an API key for *at least* **one** small model (MT) and **one** large model (LLM) provider. Small model translation quality is inferior but good to have as a fallback in case of API outage or latency. Small model translation is also used to catch words that LLM fails to translate, preventing mixed language output. 
+- Navigate to Bilibili (or your video player of choice). 
+- Select your preferred api provider and model (LLM recommended, and MT used as a fallback).
+- Select the OCR Mode tab and choose your preferred OCR model (default is fine for most purposes) 
+- For basic subtitle translation, TTS (speech) can be disabled 
+- Click OK 
+- Drag the red box over the video subtitle area
+- Press enter: the box will turn white. This means OCR detection is activated. 
+- Press play on your video.
+- Subtitles will appear.
+
+### Optional Settings
+1. For TTS (speech) mode, using the default voice method, Piper, will cause the model (in addition to the selected voice) to be downloaded locally. OpenAI TTS or Elevenlabs do not download anything but require an API key.
+2. Learn Mode may be enabled is the target language is Chinese, for those who wish to study keywords while watching videos
 
 
 ## Usage Notes: 
