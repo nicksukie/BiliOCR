@@ -50,15 +50,16 @@ Other options include audio-based translators, like [realtime-subtitle](https://
 
 ## Installation
 #### Method 1 (Easiest)
-1. Download the .dmg file in this repo. 
-2. Double click the .dmg file
-3. Drag app to your "Applications" folder
-4. Go to your "Applications" folder →  right-click on the app → Open 
-5. Confirm Open
+1. Click on "Releases" on the right side of this page.
+2. Download the BiliOCR.dmg file.
+3. Double click the BiliOCR.dmg file
+4. Drag the app icon to your "Applications" folder
+5. Go to your "Applications" folder →  right-click on the app → Open 
+6. Confirm Open
 
-*  The first time you run the app, it will prompt you to input API keys. Only one (LLM or MT) provider key is required, but it is highly recommended to add one of each (i.e. OpenAI + Google translate). 
+*  The first time you run the app, it will prompt you to input API keys. Only one (LLM or MT) provider key is required, but it is highly recommended to add one of each (i.e. OpenAI + Google Translate). 
 
-* The first time you run the app, you will also be prompted to provide "Screen Recording" permissions. This is required for OCR functionality to work. MacOS will present you with a pop-up which will take you to your settings, and there you just have to toggle the setting to "on" for the app "BiliOCR". 
+* The first time you run the app, you will also be prompted to provide "Screen Recording" permissions. This is required for OCR functionality to work. MacOS will present you with a pop-up which will take you to your settings, and there you simply have to toggle the setting to "on" for the app "BiliOCR". 
 
 
 #### Method 2 (Advanced)
