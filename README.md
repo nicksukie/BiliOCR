@@ -1,4 +1,4 @@
-# BiliOCR - Real-time translation of video subtitles. 
+# BiliOCR - Real-time translation of embedded video subtitles. 
 
 ## What is it? 
  
@@ -14,7 +14,7 @@ It also has a text-to-speech option to read out the translated subtitles for a d
 The inspiration for creating this tool is to provide a simple way to watch and understand videos on Bilibili for people whose native language is not Chinese.
 Most videos on Bilibili have subtitles, but they are embedded into the video itself, rather than overlaid, so browser-based subtitle translators don't work.
 
-Other options include audio-based translators, like (realtime-subtitle)[https://github.com/Vanyoo/realtime-subtitle/tree/master]. 
+Other options include audio-based translators, like [realtime-subtitle](https://github.com/Vanyoo/realtime-subtitle/tree/master). 
 
 ## How to use: 
 - First, obtain and input an API key for *at least* **one** small model (MT) and **one** large model (LLM) provider. Small model translation quality is inferior but good to have as a fallback in case of API outage or latency. Small model translation is also used to catch words that LLM fails to translate, preventing mixed language output. 
@@ -33,8 +33,9 @@ Other options include audio-based translators, like (realtime-subtitle)[https://
 - Only available for Chinese source language
 - Check off the Learn Mode box at the bottom of the main menu to activate learn mode. 
 - When translations begin to populate the subtitle box, keywords will pop up in a separate panel, including the Chinese word, the pinyin pronunciation, and the target language definition. If target language is English, it will first search CEdict for definitions. For other target languages, it will obtain definitions through translation based on the selected model (highly recommend using MT for this, as LLM is overkill). 
-- Learn Mode keywords can be starred, which saves them to a local database so you can review them later. Words can also be copied (one or more by highlighting them), or saved into markdown files (full list).<img width="466" height="525" alt="Pasted image 20260222173311" src="https://github.com/user-attachments/assets/daf0368a-765a-4255-a62f-c1c4191a8bab" />
+- Learn Mode keywords can be starred, which saves them to a local database so you can review them later. Words can also be copied (one or more by highlighting them), or saved into markdown files (full list).
 
+<img width="466" height="525" alt="Pasted image 20260222173311" src="https://github.com/user-attachments/assets/daf0368a-765a-4255-a62f-c1c4191a8bab" />
 
 ### Text-to-speech (TTS) - Real-time overdub.
 - OCR translation mode comes complete with TTS integration, to achieve an automatic overdub effect.
@@ -46,6 +47,24 @@ Other options include audio-based translators, like (realtime-subtitle)[https://
 ### Audio mode - Use computer audio to transcribe and translate video speech, no OCR needed. 
 - This is an adaptation of [realtime-subtitle ](https://github.com/Vanyoo/realtime-subtitle/tree/master) integrated with our subtitle streaming/reconciling algorithm, real-time updating UI, and LLM/MT integrated translation options. Audio mode is not compatible with TTS, because the dubbed audio will confound the audio input for translation, creating an undesirable feedback loop. 
 - Setup requires Blackhole to route computer audio back as input to be detected by the system. See  [realtime-subtitle ](https://github.com/Vanyoo/realtime-subtitle/tree/master) for detailed setup instructions and documentation. 
+
+## Installation
+#### Method 1 (Easiest)
+1. Download the .dmg file in this repo. 
+2. Double click the .dmg file
+3. Drag app to your "Applications" folder
+4. Go to your "Applications" folder →  right-click on the app → Open 
+5. Confirm Open
+
+*  The first time you run the app, it will prompt you to input API keys. Only one (LLM or MT) provider key is required, but it is highly recommended to add one of each (i.e. OpenAI + Google translate). 
+
+* The first time you run the app, you will also be prompted to provide "Screen Recording" permissions. This is required for OCR functionality to work. MacOS will present you with a pop-up which will take you to your settings, and there you just have to toggle the setting to "on" for the app "BiliOCR". 
+
+
+#### Method 2 (Advanced)
+1. Download the full repo from Github.
+2. Install all dependencies (both those in requirements.txt, as well as in Brewfile.)
+3. Run the app using your terminal.
 
 
 ## Usage Notes: 
@@ -61,8 +80,8 @@ We appreciate community support in helping us to know which language combination
 - Chinese-->English, All Siliconflow models, OpenAI (GPT 4 models), default settings. 
 
 #### Known bugs
-- GPT-5 models seems to be having API response issues. Stick with GPT-4o-mini for now.
-- - \[Resolved\] TTS audio might begin to stutter after some time due to competing CPU usage with OCR. Try sending `sudo killall coreaudiod` into your terminal to see if it helps, or refreshing the Format in "Audio Devices">"Macbook Speakers". Otherwise, consider using a Bluetooth audio device.
- 
+- GPT-5 models seems to be having API response issues. Stick with GPT-4o-mini for now. 
+- \[Resolved\] TTS audio might begin to stutter after some time due to competing CPU usage with OCR. Try sending `sudo killall coreaudiod` into your terminal to see if it helps, or refreshing the Format in "Audio Devices">"Macbook Speakers". Otherwise, consider using a Bluetooth audio device. 
+
 ### Disclaimer
 This app is in no way affiliated with Bilibili 哔哩哔哩.
