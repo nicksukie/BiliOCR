@@ -16,7 +16,11 @@ Most videos on Bilibili have subtitles, but they are embedded into the video its
 
 Other options include audio-based translators, like [realtime-subtitle](https://github.com/Vanyoo/realtime-subtitle/tree/master). 
 
-## Additional Features
+## Features
+
+### Real-Time Subtitle Translation
+- The core feature is the subtitle streaming feature, which uses OCR to read subtitles in the source language, detects complete phrases/sentences, sends for translation, and then displays the translations on the screen with minimal latency
+- OCR subtitle translation is ideal for videos where the subtitles are "baked" into the video, and therefore not readable by browser-based translation tools
 
 ### Learn Mode - Video watching as a language improvement method. 
 - Only available for Chinese source language
@@ -79,7 +83,7 @@ Other options include audio-based translators, like [realtime-subtitle](https://
 ## Usage Notes: 
 - While the tool was built with Bilibili in mind, technically it can be used for any Chinese video application, like Tencent video, Youku, Douyin (browser) etc. 
 - While the tool was built with Chinese as a source language in mind, technically it can be used with any source language
-- As of v1.0, only Chinese as a source language has been tested. We will update this readme will a list of supported language as they are tested and verified functional. Until then, feel free to experiment with various combinations. 
+- As of v1.0, only Chinese as a source language has been tested. We will update this readme with a list of supported language as they are tested and verified functional. Until then, feel free to experiment with various combinations. 
 - Certain LLM models translate better on certain source and output languages, depending on their training data. Some models might fail for rare or data-sparse languages. We will also keep a running log of the optimal models for which languages below. The same goes for voice models for TTS.
 - While the default settings should work for most Chinese-->English subtitles, different output languages may call for differently tuned settings. This depends on many things including the way languages are tokenized (i.e. word count per unit time), the speed and concentration of words per unit time, concentration of words per source subtitle line, the rate of source subtitle change etc. 
 
