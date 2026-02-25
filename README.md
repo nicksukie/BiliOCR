@@ -20,6 +20,7 @@ Other options include audio-based translators, like [realtime-subtitle](https://
 
 ### Real-Time Subtitle Translation
 - The core feature is the subtitle streaming feature, which uses OCR to read subtitles in the source language, detects complete phrases/sentences, sends for translation, and then displays the translations on the screen with minimal latency
+- Users can select from a variety of large language model providers for translation, or choose conventional machine translation like Google Translate as a cost-effective option
 - OCR subtitle translation is ideal for videos where the subtitles are "baked" into the video, and therefore not readable by browser-based translation tools
 
 ### Learn Mode - Video watching as a language improvement method. 
